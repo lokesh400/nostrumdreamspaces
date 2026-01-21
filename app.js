@@ -130,5 +130,23 @@ app.get("/services", (req,res)=>{
   res.render('services.ejs');
 })
 
+app.get("/status", (req,res)=>{
+  res.send("Server is up and running");
+})
+
+function pingSite(url) {
+  setInterval(async () => {
+    try {
+      const res = await fetch(url, { method: "HEAD" });
+      console.log(`Status: ${res.status}`);
+    } catch (err) {
+      console.error("Ping failed:", err.message);
+    }
+  }, 2000);
+}
+
+pingSite("https://nostrumdreamspaces.onrender.com/status");
+
+
 
 app.listen(port, () => console.log(`Server running on http://localhost:${port}`));
