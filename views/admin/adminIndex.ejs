@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    
+    <!-- TailwindCSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- GSAP Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+    <style>
+        /* Background Animation */
+        body {
+            background: linear-gradient(135deg, #111, #222);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Glassmorphism Card */
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(12px);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            color: white;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 20px rgba(255, 215, 0, 0.3);
+        }
+
+        /* Button Styling */
+        .admin-button {
+            display: inline-block;
+            padding: 10px 14px;
+            background: linear-gradient(135deg, #FFD700, #FFA500);
+            color: black;
+            font-weight: bold;
+            border-radius: 8px;
+            transition: all 0.3s ease-in-out;
+        }
+        .admin-button:hover {
+            background: linear-gradient(135deg, #FFA500, #FFD700);
+            transform: scale(1.05);
+        }
+
+        /* Small Buttons inside cards */
+        .small-button {
+            display: block;
+            margin-top: 10px;
+            padding: 8px 12px;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            font-size: 14px;
+            border-radius: 6px;
+            transition: all 0.3s ease-in-out;
+        }
+        .small-button:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container mx-auto text-center">
+        <h1 class="text-5xl font-extrabold text-yellow-400 mb-10">
+            Admin Dashboard
+        </h1>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-8">
+            <!-- Manage Users Card -->
+            <a href="/admin/users" class="card p-6">
+                <i class="fas fa-users text-4xl text-yellow-300"></i>
+                <h2 class="text-2xl mt-3">Manage Users</h2>
+                <p class="mt-2 text-yellow-200">Edit, delete, and manage users.</p>
+            </a>
+
+            <!-- View Reports Card -->
+            <a href="/admin/reports" class="card p-6">
+                <i class="fas fa-chart-line text-4xl text-yellow-300"></i>
+                <h2 class="text-2xl mt-3">View Reports</h2>
+                <p class="mt-2 text-yellow-200">Analyze statistics and reports.</p>
+            </a>
+
+            <!-- Project Management Card -->
+            <div class="card p-6">
+                <i class="fas fa-folder text-4xl text-yellow-300"></i>
+                <h2 class="text-2xl mt-3">Projects</h2>
+                <p class="mt-2 text-yellow-200">Manage projects and collections.</p>
+                <a href="/add/new/project" class="small-button">Add Project</a>
+                <a href="/all/projects" class="small-button">All Projects</a>
+            </div>
+
+            <!-- Enquiries Card -->
+            <div class="card p-6">
+                <i class="fas fa-envelope text-4xl text-yellow-300"></i>
+                <h2 class="text-2xl mt-3">Enquiries</h2>
+                <p class="mt-2 text-yellow-200">View and manage customer queries.</p>
+                <a href="/enquiries" class="small-button">View All Enquiries</a>
+            </div>
+
+            <!-- Settings Card -->
+            <a href="/admin/settings" class="card p-6">
+                <i class="fas fa-cogs text-4xl text-yellow-300"></i>
+                <h2 class="text-2xl mt-3">Settings</h2>
+                <p class="mt-2 text-yellow-200">Customize admin settings.</p>
+            </a>
+        </div>
+
+        <br>
+
+        <!-- Logout Button -->
+        <a href="/logout" class="admin-button mt-8 inline-block">
+            Logout <i class="fas fa-sign-out-alt"></i>
+        </a>
+    </div>
+
+    <script>
+        // GSAP Animations
+        gsap.from("h1", { opacity: 0, y: -40, duration: 1 });
+        gsap.from(".card", { opacity: 0, y: 20, stagger: 0.2, duration: 1 });
+        gsap.from(".admin-button", { opacity: 0, scale: 0.8, duration: 1, delay: 0.5 });
+    </script>
+
+    <!-- FontAwesome for Icons -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<div style="padding: 100px 0; background-color: black; color: goldenrod; text-align: center; box-shadow: 0 0 10px;">
+    <div style="max-width: 1100px; margin: auto; padding: 0 20px; display: flex; flex-wrap: wrap; gap: 30px; justify-content: center;">
+
+        <!-- Contact Form (Takes Full Width on Mobile) -->
+        <div style="flex: 1; min-width: 300px; max-width: 600px; text-align: left;">
+            <h2 style="font-family: 'Playfair Display', serif; font-size: 32px; font-weight: bold; margin-bottom: 30px;">
+                Get in Touch
+            </h2>
+            <form action="/add/new/query" method="POST">
+                <div style="margin-bottom: 20px;">
+                    <label style="display: block; font-size: 14px; margin-bottom: 5px;">Name</label>
+                    <input type="text" name="name" placeholder="Enter your name"
+                        style="width: 100%; padding: 12px; border: 2px solid goldenrod; background: transparent; color: white; border-radius: 5px;">
+                </div>
+                <div style="margin-bottom: 20px;">
+                    <label style="display: block; font-size: 14px; margin-bottom: 5px;">Mobile</label>
+                    <input type="tel" name="mobile" placeholder="Enter your mobile"
+                        style="width: 100%; padding: 12px; border: 2px solid goldenrod; background: transparent; color: white; border-radius: 5px;">
+                </div>
+                <div style="margin-bottom: 20px;">
+                    <label style="display: block; font-size: 14px; margin-bottom: 5px;">Email</label>
+                    <input type="email" name="email" placeholder="Enter your email"
+                        style="width: 100%; padding: 12px; border: 2px solid goldenrod; background: transparent; color: white; border-radius: 5px;">
+                </div>
+                <div style="margin-bottom: 20px;">
+                    <label style="display: block; font-size: 14px; margin-bottom: 5px;">Message</label>
+                    <textarea name="query" rows="4" placeholder="Enter your message"
+                        style="width: 100%; padding: 12px; border: 2px solid goldenrod; background: transparent; color: white; border-radius: 5px;"></textarea>
+                </div>
+                <button type="submit"
+                    style="width: 100%; padding: 12px; background-color: goldenrod; color: black; border: none; border-radius: 5px; font-size: 16px; cursor: pointer; font-weight: bold; box-shadow: 0 0 10px goldenrod;">
+                    Send Message
+                </button>
+            </form>
+        </div>
+
+        <!-- Contact Information (Stacks Below on Mobile) -->
+        <div style="flex: 1; min-width: 300px; max-width: 500px; padding: 30px; background-color: black; border-radius: 8px; box-shadow: 0 0 10px goldenrod; text-align: left;">
+            <h3 style="font-size: 24px; font-weight: bold; margin-bottom: 20px;">Contact Information</h3>
+            <div style="margin-bottom: 15px; display: flex; align-items: center;">
+                <i class="fas fa-map-marker-alt" style="color: goldenrod; width: 20px;"></i>
+                <p style="margin-left: 10px;">Nostrum Dream Spaces, Near Dabchik Nh-19 Hodal, Palwal, Haryana</p>
+            </div>
+            <div style="margin-bottom: 15px; display: flex; align-items: center;">
+                <i class="fas fa-phone" style="color: goldenrod; width: 20px;"></i>
+                <p style="margin-left: 10px;">+91 8929930303,+91 6006372451 </p>
+            </div>
+            <div style="margin-bottom: 15px; display: flex; align-items: center;">
+                <i class="fas fa-envelope" style="color: goldenrod; width: 20px;"></i>
+                <p style="margin-left: 10px;">info.nostrumdreamspaces.com</p>
+            </div>
+            <div style="display: flex; align-items: center;">
+                <i class="fas fa-clock" style="color: goldenrod; width: 20px;"></i>
+                <p style="margin-left: 10px;">Mon-Fri: 9:00 AM - 6:00 PM</p>
+            </div>
+        </div>
+    </div>
+</div>

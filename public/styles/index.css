@@ -1,0 +1,252 @@
+<<<<<<< HEAD
+    body {
+      font-family: Arial, sans-serif;
+      padding: 0;
+      overflow-x: hidden;
+    }
+
+    .navbar {
+      background-color: black; /* Set background color to black */
+    }
+  
+    .navbar .nav-link {
+      color: white; /* Set text color to white for better visibility */
+    }
+  
+    .navbar .nav-link:hover {
+      color: gray; /* Optional: Change color on hover */
+    }
+  
+    .navbar .nav-link.disabled {
+      color: lightgray; /* Optional: Style for disabled links */
+    }
+  
+    /* Fix for dropdown visibility in mobile view */
+    .navbar-collapse {
+      max-height: calc(100vh - 80px); /* Ensure dropdowns fit in the remaining space */
+      overflow-y: auto; /* Allow scrolling if content overflows */
+    }
+  
+    .navbar-toggler {
+      border-color: white; /* Optional: Change toggler button color */
+    }
+  
+    .navbar-toggler-icon {
+      background-color: white; /* Optional: Customize toggler icon color */
+    }
+
+    .section {
+      width: 100%;
+      border: 1px solid #ccc;
+      opacity: 0; /* Start with hidden sections */
+      transform: translateX(-100%); /* Start off-screen */
+      transition: transform 1s ease, opacity 1s ease;
+    }
+
+
+    h2 {
+      margin: 0;
+      color: #333;
+    }
+
+    .slide-left {
+      transform: translateX(-100%);
+    }
+
+    .slide-right {
+      transform: translateX(100%);
+    }
+
+    /* Add a smooth transition effect for opacity and movement */
+    .section.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    .container {
+            padding: 20px;
+        }
+        h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .service {
+            border-radius: 10px;
+            padding: 20px;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 10px;
+        }
+        .service img {
+            max-width: 50px;
+            margin-bottom: 10px;
+        }
+        .service p {
+            font-size: 1.2em;
+            margin: 0;
+        }
+        .view-all i {
+            margin-right: 5px;
+        }
+
+        .bottom{
+          padding: 20px;
+        }
+
+        @media (max-width: 768px) {
+           #main{
+            width: 100%;
+           }
+           .service {
+                width: 100%;
+            }
+            .footer {
+                flex-direction: column;
+            }
+            .footer-bottom {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .footer-bottom .social-icons {
+                margin-top: 10px;
+            }
+            .work-item {
+              flex: 1 1 calc(50% - 20px);
+              max-width: calc(50% - 20px);
+          }
+        }
+=======
+    body {
+      font-family: Arial, sans-serif;
+      padding: 0;
+      overflow-x: hidden;
+    }
+
+    .navbar {
+      background-color: black; /* Set background color to black */
+    }
+  
+    .navbar .nav-link {
+      color: white; /* Set text color to white for better visibility */
+    }
+  
+    .navbar .nav-link:hover {
+      color: gray; /* Optional: Change color on hover */
+    }
+  
+    .navbar .nav-link.disabled {
+      color: lightgray; /* Optional: Style for disabled links */
+    }
+  
+    /* Fix for dropdown visibility in mobile view */
+    .navbar-collapse {
+      max-height: calc(100vh - 80px); /* Ensure dropdowns fit in the remaining space */
+      overflow-y: auto; /* Allow scrolling if content overflows */
+    }
+  
+    .navbar-toggler {
+      border-color: white; /* Optional: Change toggler button color */
+    }
+  
+    .navbar-toggler-icon {
+      background-color: white; /* Optional: Customize toggler icon color */
+    }
+
+    .section {
+      width: 100%;
+      border: 1px solid #ccc;
+      opacity: 0; /* Start with hidden sections */
+      transform: translateX(-100%); /* Start off-screen */
+      transition: transform 1s ease, opacity 1s ease;
+    }
+
+
+    h2 {
+      margin: 0;
+      color: #333;
+    }
+
+    .slide-left {
+      transform: translateX(-100%);
+    }
+
+    .slide-right {
+      transform: translateX(100%);
+    }
+
+    /* Add a smooth transition effect for opacity and movement */
+    .section.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    .container {
+            padding: 20px;
+        }
+        h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .service {
+            border-radius: 10px;
+            padding: 20px;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 10px;
+        }
+        .service img {
+            max-width: 50px;
+            margin-bottom: 10px;
+        }
+        .service p {
+            font-size: 1.2em;
+            margin: 0;
+        }
+        .view-all i {
+            margin-right: 5px;
+        }
+
+        .bottom{
+          padding: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .service {
+                width: 100%;
+            }
+            .footer {
+                flex-direction: column;
+            }
+            .footer-bottom {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .footer-bottom .social-icons {
+                margin-top: 10px;
+            }
+            .work-item {
+              flex: 1 1 calc(50% - 20px);
+              max-width: calc(50% - 20px);
+          }
+        }
+        @media (max-width: 480px) {
+          .work-item {
+              flex: 1 1 100%;
+              max-width: 100%;
+          }
+      }
+>>>>>>> c20b9689c2d8b690e35a70c14a0214d8f7248f34

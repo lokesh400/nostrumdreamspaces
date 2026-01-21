@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Enquiries</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- FontAwesome for Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+
+    <!-- GSAP Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+    <style>
+        /* Toast Notification Styling */
+        .toast {
+            opacity: 0;
+            transform: translateY(-20px);
+            transition: all 0.5s ease-in-out;
+        }
+
+        .delete-btn {
+            transition: background 0.3s ease;
+        }
+
+        .delete-btn:hover {
+            background: #ff4d4d;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-900 text-white font-sans">
+
+    <!-- Toast Notification -->
+    <div id="toast-container" class="fixed top-5 right-5 z-50">
+        <% if (locals.success_msg) { %>
+            <div class="toast bg-green-500 text-white px-4 py-2 rounded shadow-md">
+                <%= locals.success_msg %>
+            </div>
+            <% } %>
+    </div>
+
+    <!-- Page Content -->
+    <div class="max-w-6xl mx-auto px-6 py-12">
+        <h1 class="text-4xl font-bold text-center text-yellow-400 mb-6">Admin Panel - Enquiries</h1>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <% if (enquiries.length> 0) { %>
+                <% enquiries.forEach(enquiry=> { %>
+                    <div class="enquiry-card bg-gray-800 p-6 rounded-lg shadow-lg">
+                        <h2 class="text-xl font-semibold">
+                            <%= enquiry.name %>
+                        </h2>
+                        <p class="text-sm text-gray-400">📞 <%= enquiry.mobile %>
+                        </p>
+                        <p class="text-sm text-gray-400">📧 <%= enquiry.email %>
+                        </p>
+                        <p class="text-sm text-gray-300 mt-2">📝 <%= enquiry.query %>
+                        </p>
+                        <form action="/admin/enquiries/<%= enquiry._id %>?_method=DELETE" method="POST">
+                            <button class="delete-btn mt-4 px-4 py-2 bg-red-600 text-white rounded shadow"
+                            onclick="deleteEnquiry('<%= enquiry._id %>')">
+                            <i class="fas fa-trash"></i> Delete
+                        </button>
+                        </form>    
+                    </div>
+                    <% }) %>
+                        <% } else { %>
+                            <p class="text-center text-gray-400 text-lg">No enquiries found.</p>
+                        <% } %>
+        </div>
+    </div>
+
+    <script>
+        // GSAP Animations
+        gsap.from(".enquiry-card", { opacity: 0, scale: 0.9, duration: 0.5, stagger: 0.2 });
+
+        // Toast Animation
+        let toast = document.querySelector('.toast');
+        if (toast) {
+            setTimeout(() => {
+                toast.classList.add("opacity-100");
+            }, 500);
+            setTimeout(() => {
+                toast.classList.add("opacity-0");
+                setTimeout(() => toast.remove(), 500);
+            }, 3000);
+        }
+
+    </script>
+
+</body>
+
+</html>

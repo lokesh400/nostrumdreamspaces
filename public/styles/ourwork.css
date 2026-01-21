@@ -1,0 +1,107 @@
+<<<<<<< HEAD
+.container2 {
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+.intro {
+    background-color: #fff;
+    color: #000;
+    padding: 40px;
+    text-align: center;
+    margin-bottom: 20px;
+    width: 100%;
+}
+.intro h1 {
+    font-size: 36px;
+    margin: 0;
+}
+.intro h1 span {
+    color: #d4a373;
+}
+.intro p {
+    font-size: 18px;
+    margin: 20px 0;
+}
+.intro button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.work-item {
+    position: relative;
+    margin: 10px;
+    flex: 1 1 calc(33.333% - 20px);
+    max-width: calc(33.333% - 20px);
+}
+.work-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.work-item span {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+=======
+.container2 {
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+.intro {
+    background-color: #fff;
+    color: #000;
+    padding: 40px;
+    text-align: center;
+    margin-bottom: 20px;
+    width: 100%;
+}
+.intro h1 {
+    font-size: 36px;
+    margin: 0;
+}
+.intro h1 span {
+    color: #d4a373;
+}
+.intro p {
+    font-size: 18px;
+    margin: 20px 0;
+}
+.intro button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.work-item {
+    position: relative;
+    margin: 10px;
+    flex: 1 1 calc(33.333% - 20px);
+    max-width: calc(33.333% - 20px);
+}
+.work-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.work-item span {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+>>>>>>> c20b9689c2d8b690e35a70c14a0214d8f7248f34
